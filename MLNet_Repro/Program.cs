@@ -8,7 +8,7 @@ string baseDirectory =
     AppDomain.CurrentDomain.BaseDirectory;
 
 
-var service = new MLNetPredictionService(baseDirectory + Path.DirectorySeparatorChar + "TrainedModel");
+using var service = new MLNetPredictionService(baseDirectory + Path.DirectorySeparatorChar + "TrainedModel");
 var imagePath = baseDirectory + Path.DirectorySeparatorChar + "Images" + Path.DirectorySeparatorChar + "example.png";
 var image = Image.FromFile(imagePath) as Bitmap;
 

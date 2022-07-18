@@ -5,7 +5,7 @@ using Microsoft.ML;
 
 namespace MLNet_Repro.Services;
 
-public class MLNetPredictionService 
+public class MLNetPredictionService : IDisposable
 {
     private readonly MLContext _mlContext;
     private PredictionEngine<ModelInput, TensorflowOutput> _predictionEngine;
